@@ -275,7 +275,7 @@
   }
 
   .hero-3rd {
-    padding: 0 0 0 3.2rem;
+    grid-template-columns: 1fr;
   }
 
   .hero-img {
