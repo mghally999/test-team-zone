@@ -278,3 +278,43 @@ const sliderMentor = function () {
 };
 
 sliderMentor();
+
+// Popup and Overlay Elements
+const popup = document.querySelector(".popup");
+const overlay = document.querySelector(".popup-overlay");
+const closePopupBtn = document.querySelector(".popup-close");
+const openPopupBtns = document.querySelectorAll(".btn");
+
+// Function to open the popup
+function openPopup() {
+  popup.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+// Function to close the popup
+function closePopup() {
+  popup.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+// Attach event listeners to buttons to open the popup
+openPopupBtns.forEach((btn) => {
+  btn.addEventListener("click", openPopup);
+});
+
+// Close popup when clicking on overlay
+overlay.addEventListener("click", closePopup);
+
+// Optional: Close popup when pressing the Esc key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !popup.classList.contains("hidden")) {
+    closePopup();
+  }
+});
+
+document
+  .querySelector(".whatsapp-link")
+  .addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default link behavior
+    window.open("https://wa.me/971505060701", "_blank"); // Open the WhatsApp chat in a new tab
+  });

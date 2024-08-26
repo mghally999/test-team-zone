@@ -185,7 +185,6 @@
 .hero-img-6th {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .slide-6th {
@@ -1272,6 +1271,47 @@ input[type="number"] {
 
 /* CTA SECTION END */
 
+/* Popup and Overlay Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  z-index: 101;
+  max-width: 90%;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Optional: Close Button Styles */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* FOOTER SECTION START */
 .footer {
   padding: 12.8rem 0;
@@ -1398,4 +1438,28 @@ input[type="number"] {
   font-size: 1.4rem;
   color: #fff;
   margin-top: 1rem;
+}
+
+/* WhatsApp Floating Button Styles */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
