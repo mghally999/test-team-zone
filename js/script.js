@@ -233,7 +233,7 @@ const slider6th = function () {
 slider6th();
 
 const sliderMentor = function () {
-  const slides = document.querySelectorAll(".meal-3");
+  const slides = document.querySelectorAll(".mentor-card");
   const btnLeft = document.querySelector(
     ".slider__btn-mentor.slider__btn--left"
   );
@@ -242,48 +242,32 @@ const sliderMentor = function () {
   );
 
   let curSlide = 0;
-  const maxSlide = slides.length;
 
-  // Function to move slides
   const goToSlide = function (slide) {
     slides.forEach((s, i) => {
       if (slide === 0) {
-        // Show the first two cards, hide the third one
-        if (i < 2) {
-          s.style.transform = `translateX(${100 * i}%)`;
-        } else {
-          s.style.transform = `translateX(110%)`;
-        }
+        s.style.transform = `translateX(${0}%)`;
       } else {
-        // Show the third card and move the first card out
-        if (i === 2) {
-          s.style.transform = `translateX(0%)`;
-        } else {
-          s.style.transform = `translateX(-110%)`;
-        }
+        s.style.transform = `translateX(${-100}%)`;
       }
     });
   };
 
-  // Function to move to the next slide
   const nextSlide = function () {
     curSlide = curSlide === 0 ? 1 : 0;
     goToSlide(curSlide);
   };
 
-  // Function to move to the previous slide
   const prevSlide = function () {
     curSlide = curSlide === 0 ? 1 : 0;
     goToSlide(curSlide);
   };
 
-  // Initialize slider
   const init = function () {
-    goToSlide(0); // Start by showing the first two cards
+    goToSlide(0);
   };
   init();
 
-  // Attach event listeners
   btnRight.addEventListener("click", nextSlide);
   btnLeft.addEventListener("click", prevSlide);
 

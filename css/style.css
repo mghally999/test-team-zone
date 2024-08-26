@@ -854,7 +854,73 @@ li {
 }
 
 .section-mentor {
-  background: white;
+  padding: 3rem 0;
+  position: relative;
+  background-color: #f7f7f7;
+}
+
+.mentor-container {
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.mentor-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  width: calc(100% / 2); /* Adjust width to fit two cards side by side */
+  transition: transform 0.5s ease-in-out;
+  /* Remove any transform properties unless for initial setup */
+}
+
+.mentor-img {
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.mentor-content {
+  padding: 1.5rem;
+}
+
+.mentor-name {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.mentor-details {
+  list-style: none;
+  padding: 0;
+}
+
+.mentor-details li {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.slider__btn-mentor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider__btn--left {
+  left: 0;
+}
+
+.slider__btn--right {
+  right: 0;
 }
 
 .meal-3 {
