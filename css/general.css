@@ -92,12 +92,24 @@ body {
   margin: 0 auto;
 }
 
+.container-packages {
+  /* max-width: 120rem; */
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
 
   /* margin-bottom: 9.6rem; */
+}
+
+.grid-packages {
+  display: grid;
+  column-gap: 2.4rem;
+  row-gap: 9.6rem;
 }
 
 /* .grid:last-child {

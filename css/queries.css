@@ -110,6 +110,13 @@
     font-size: 6.4rem;
   }
 
+  @media (max-width: 768px) {
+    .meal {
+      width: 100%;
+      height: auto; /* Let the height adjust based on content */
+    }
+  }
+
   .meal-content {
     padding: 2.4rem 3.2rem 3.2rem 3.2rem;
   }

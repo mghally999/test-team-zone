@@ -669,7 +669,8 @@ li {
 
 /* MEALS SECTION START */
 .section-meals {
-  padding: 9.6rem 0;
+  background-color: #ffffff;
+  padding: 5.5rem 0;
 }
 
 /* .section-meals-2 {
@@ -680,37 +681,118 @@ li {
   padding: 50px 0 50px 55px;
 } */
 
+.meal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.age-badge {
+  border-radius: 12px;
+  padding: 5px 6px;
+  background: #ff011f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  overflow: hidden;
   transition: all 0.4s;
+  flex: auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 41px #0006;
+
+  width: 400px; /* Ensure the card takes up the full width of its grid column */
+  height: 434px; /* Adjust this to match the desired height */
+  margin: 0 auto; /* Center the card in its grid column */
 }
 
 .meal:hover {
   transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-img {
+  background-image: url("../img/martial1.png");
+
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 30%;
+  background-size: cover;
+
   width: 100%;
+  height: 60%; /* Adjust the height of the image relative to the card height */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+
+.meal-img-2 {
+  width: 100%;
+  background-image: url("../img/martial2.png");
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 30%;
+  background-size: cover;
+
+  width: 100%;
+  height: 60%; /* Adjust the height of the image relative to the card height */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+
+.meal-img-3 {
+  width: 100%;
+  background-image: url("../img/martial3.jpeg");
+
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 30%;
+  background-size: cover;
+
+  width: 100%;
+  height: 60%; /* Adjust the height of the image relative to the card height */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
 }
 
 .meal-content {
-  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+  padding: 20px;
+
+  height: auto; /* Fill the remaining height of the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure the content is evenly spaced */
+}
+
+.meal-title {
+  color: #000;
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .meal-tags {
-  margin-bottom: 1.2rem;
-  display: flex;
-  gap: 0.8rem;
+  margin-top: auto; /* Pushes tags and button to the bottom */
+}
+
+.btn.btn--form {
+  margin-top: 26px; /* Space between tags and button */
+  align-self: start; /* Aligns the button to the start of the content */
+  background-color: #ff011f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .tag {
   display: inline-block;
   padding: 0.4rem 0.8rem;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-top: 1.2rem;
+  font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
   color: #333;
   border-radius: 100px;
@@ -726,13 +808,6 @@ li {
 
 .tag--paleo {
   background-color: #ffd43b;
-}
-
-.meal-title {
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 3.2rem;
 }
 
 .meal-attributes {
