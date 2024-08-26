@@ -155,7 +155,22 @@ body {
   color: #000;
 }
 
+.heading-primary-4th {
+  font-size: 4.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem !important;
+  color: #000;
+}
+
 .heading-primary-3rrd {
+  font-size: 3rem;
+  margin-top: 5rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem !important;
+  color: #000;
+}
+
+.heading-primary-4tth {
   font-size: 3rem;
   margin-top: 5rem;
   line-height: 1.05;
@@ -172,6 +187,11 @@ body {
 }
 
 .heading-primary-3rd span {
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.heading-primary-4th span {
   color: #ffffff;
   line-height: 1.1;
 }
@@ -321,7 +341,7 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0.3rem 0.3rem rgba(230, 125, 34, 0.5);
+  box-shadow: 0 0 0.3rem 0.3rem #ff011f;
 }
 
 /* HELPER/SETTINGS CLASSES */
