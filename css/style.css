@@ -166,6 +166,88 @@
   overflow: hidden;
 }
 
+.hero-6th {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-6th {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-img-6th {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-6th {
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1.1s ease;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Update buttons and dots */
+.slider__btn-6th {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider__btn--left-6th {
+  left: 10px;
+}
+
+.slider__btn--right-6th {
+  right: 10px;
+}
+
+.dots-6th {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dots-6th .dots__dot-6th {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dots-6th .dots__dot--active-6th {
+  opacity: 1;
+  background-color: #ff5722;
+}
+
 .slider {
   position: relative;
   width: 100%;
