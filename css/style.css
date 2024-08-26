@@ -283,6 +283,19 @@
   z-index: 10;
 }
 
+.slider__btn-mentor {
+  /* position: absolute; */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 10;
+}
+
 .slider__btn--left {
   left: 10px;
 }
@@ -673,6 +686,11 @@ li {
   padding: 5.5rem 0;
 }
 
+.section-meals-3 {
+  background-color: #ffffff;
+  padding: 5.5rem 0;
+}
+
 /* .section-meals-2 {
   display: flex;
   overflow: hidden;
@@ -833,6 +851,23 @@ li {
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
+}
+
+.section-mentor {
+  background: white;
+}
+
+.meal-3 {
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease;
+}
+
+.container.grid-packages {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 /* MEALS SECTION END */
