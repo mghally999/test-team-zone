@@ -871,7 +871,7 @@ li {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
   width: calc(100% / 2); /* Adjust width to fit two cards side by side */
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.8s ease-in-out;
   /* Remove any transform properties unless for initial setup */
 }
 
