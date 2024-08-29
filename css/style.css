@@ -394,7 +394,6 @@
   justify-content: space-around;
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .tab-content {
@@ -403,6 +402,8 @@
 }
 
 #tabs button {
+  margin-top: 1rem;
+  width: 260px;
   background-color: #ffffff;
   color: #000;
   border: 1px solid #ff011f;

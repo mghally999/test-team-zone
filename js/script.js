@@ -113,7 +113,7 @@ function highlightButton(btn) {
   btn.className = "active"; // set new style / highlight
 }
 
-function handleClick(event) {
+function handleHover(event) {
   const btnId = event.target.id;
   highlightButton(event.target);
   if (btnId === "kids-two-three") {
@@ -143,17 +143,17 @@ function handleClick(event) {
 
 displayContent(content[0]); // initially show this content
 
-// Add event listeners for all buttons
-kidsTwoThree.addEventListener("click", handleClick);
-kidsFourSix.addEventListener("click", handleClick);
-kidsSevenTen.addEventListener("click", handleClick);
-teensElevenFifteen.addEventListener("click", handleClick);
-whiteBeltIntro.addEventListener("click", handleClick);
-beginnerClasses.addEventListener("click", handleClick);
-advancedClasses.addEventListener("click", handleClick);
-competitionClasses.addEventListener("click", handleClick);
-privateClasses.addEventListener("click", handleClick);
-nogiClasses.addEventListener("click", handleClick);
+// Add event listeners for all buttons to handle hover
+kidsTwoThree.addEventListener("mouseover", handleHover);
+kidsFourSix.addEventListener("mouseover", handleHover);
+kidsSevenTen.addEventListener("mouseover", handleHover);
+teensElevenFifteen.addEventListener("mouseover", handleHover);
+whiteBeltIntro.addEventListener("mouseover", handleHover);
+beginnerClasses.addEventListener("mouseover", handleHover);
+advancedClasses.addEventListener("mouseover", handleHover);
+competitionClasses.addEventListener("mouseover", handleHover);
+privateClasses.addEventListener("mouseover", handleHover);
+nogiClasses.addEventListener("mouseover", handleHover);
 
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
