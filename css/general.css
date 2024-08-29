@@ -76,7 +76,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-  background-color: #000000;
+  /* background-color: #000000; */
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
@@ -215,7 +215,7 @@ body {
 }
 
 .heading-secondary-power {
-  font-size: 90px;
+  font-size: 76px;
   line-height: 1.2;
   color: #fff;
   /* padding: 9.6rem 0; */
@@ -268,9 +268,10 @@ body {
   color: #fff;
 }
 
-.btn--full:hover,
+.section-hero .btn--full:hover,
 .btn--full:active {
-  background-color: #cf711f;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .btn--outline:link,
@@ -308,13 +309,16 @@ body {
   line-height: 22.5px;
   text-transform: uppercase;
 }
-/* 
+
+.hero-2nd .btn--form:hover {
+  border: 1px solid #ff011f;
+}
+/*  */
 .btn--form:hover {
   background-color: #fff;
   color: #555;
-} */
-
-.link:link,
+}
+*/ .link:link,
 .link:visited {
   display: inline-block;
   color: #e67e22;

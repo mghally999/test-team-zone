@@ -44,7 +44,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4.125rem auto;
+    /* margin: 4.125rem auto; */
+  }
+
+  #bg-video {
+    top: 0;
   }
 
   .hero {

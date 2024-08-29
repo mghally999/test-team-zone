@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="img/favicon.png" />
+  <link rel="icon" href="img/team-favicon.png" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -17,19 +16,22 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/queries.css" />
 
+  <!-- Include EmailJS script -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script defer src="js/script.js"></script>
 
   <title>Test Team Zone10 &mdash; Martial Arts Academy</title>
 </head>
 
+
 <body>
   <header class="header">
     <a href="#">
-      <img class="logo" alt="Omnifood logo" src="img/teamzone-logo.png" />
+      <img class="logo" alt="Team Zone Logo" src="img/teamzone-logo.png" />
     </a>
     <!-- 
       <button class="btn-mobile-nav">
@@ -40,10 +42,14 @@
 
   <main>
     <section class="section-hero">
+      <video autoplay muted loop id="bg-video">
+        <source src="../img/team-video.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <div class="hero">
         <div class="hero-text-box">
           <h1 class="heading-primary">
-            <span>A Different Sports Experience</span>
+            <span>Your Hub For Transformation</span>
           </h1>
           <p class="hero-description">
             Building minds and bodies Physical and mental growth for kids
@@ -69,86 +75,51 @@
             <p class="delivered-text"><span>50+</span> Students</p>
           </div>
         </div>
-        <div class="hero-img-box">
+        <!-- <div class="hero-img-box">
           <picture>
-            <!-- <source srcset="img/hero.webp" type="image/webp" /> -->
+            <source srcset="img/hero.webp" type="image/webp" />
             <source srcset="img/hero-team.png" type="image/png" />
 
             <img src="img/hero-min.png" class="hero-img"
               alt="Woman enjoying food, meals in storage container, and food bowls on a table" />
           </picture>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <section class="section-how" id="how">
-      <div class="container grid grid--2-cols grid--center-v">
-        <!-- STEP 01 -->
-        <div class="step-text-box">
-          <p class="step-number">TURN WEAKNESS INTO <span>STRENGTHS</span></p>
-        </div>
-        <div class="cta">
-          <div class="cta-text-box">
-            <h2 class="heading-secondary">BOOK A TRIAL CLASS</h2>
 
-            <form class="cta-form" name="sign-up">
-              <div class="form-group">
-                <input id="full-name" type="text" placeholder="Name" name="full-name" required />
-              </div>
-
-              <div class="form-group">
-                <input id="email" type="email" placeholder="E-mail" name="email" required />
-              </div>
-
-              <div class="form-group">
-                <input id="phone-number" type="tel" placeholder="Mobile number" name="phone-number" required />
-              </div>
-
-              <div class="form-group">
-                <input id="age" type="number" placeholder="Age" name="age" required />
-              </div>
-
-              <div class="form-group">
-                <select id="location" name="location" required>
-                  <option value="" disabled selected>Select Location</option>
-                  <option value="arjan">Arjan</option>
-                  <option value="downtown">Downtown</option>
-                  <option value="jbr">JBR</option>
-                </select>
-              </div>
-
-
-              <button class="btn btn--form" type="submit">Book Now</button>
-            </form>
-          </div>
-        </div>
-    </section>
 
     <section class="section-hero-2nd">
       <div class="hero-2nd">
         <div class="hero-text-box-2nd">
           <h1 class="heading-primary-2nd">
             <span>ADAPTIVE PROGRAM FOR ALL AGES</span>
-            <div id="tabs">
-              <menu>
-                <button id="btn-why-react" class="active">4-6 years</button>
-                <button id="btn-core-features">7-9 years</button>
-                <button id="btn-resources">10-16 years</button>
-              </menu>
-
-              <h3 class="heading-tertiary">Let your children form useful habits along with a healthy lifestyle for their
-                everyday life:</h3>
-
-              <div id="tab-content"></div>
-            </div>
           </h1>
+          <div id="tabs">
+            <menu>
+              <button id="kids-two-three" class="active">2-3 years</button>
+              <button id="kids-four-six">4-6 years</button>
+              <button id="kids-seven-ten">7-10 years</button>
+              <button id="teens-eleven-fifteen">11-15 years</button>
+              <button id="white-belt-intro">White Belt Intro</button>
+              <button id="beginner-classes">Beginner Classes</button>
+              <button id="advanced-classes">Advanced Classes</button>
+              <button id="competition-classes">Competition Classes</button>
+              <button id="private-classes">Private Classes</button>
+              <button id="nogi-classes">Nogi Classes</button>
+            </menu>
+          </div>
           <button class="btn btn--form" type="submit">BOOK A TRIAL CLASS</button>
         </div>
         <div class="hero-img-box">
-          <picture>
+          <!-- <picture>
             <source srcset="img/kidsmartial.png" type="image/png" />
             <img src="img/hero-min.png" class="hero-img-2nd" alt="Kids Martial Arts" />
-          </picture>
+          </picture> -->
+          <h3 class="heading-tertiary">Let your children form useful habits along with a healthy lifestyle for their
+            everyday life:</h3>
+
+          <div id="tab-content"></div>
         </div>
       </div>
     </section>
@@ -157,7 +128,7 @@
     <section class="section-meals-2" id="meals">
       <div class="container center-text">
         <h2 class="heading-secondary-power">
-          TURN THE PAIN INTO <span>POWER</span>
+          A Different <span>Sports</span> Experience
         </h2>
       </div>
     </section>
@@ -187,112 +158,6 @@
             <source srcset="img/img3.jpeg" type="image/png" />
             <img src="img/hero-min.png" class="hero-img-2nd" alt="Kids Martial Arts" />
           </picture>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-hero-4th">
-      <div class="hero-4th slider">
-        <div class="hero-img-box slide">
-          <picture>
-            <source srcset="img/imgimg.jpeg" type="image/jpeg" />
-            <img src="img/imgimg.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
-          </picture>
-        </div>
-        <div class="hero-img-box slide">
-          <picture>
-            <source srcset="img/img3.jpeg" type="image/jpeg" />
-            <img src="img/img3.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
-          </picture>
-        </div>
-        <div class="hero-img-box slide">
-          <picture>
-            <source srcset="img/img2.jpeg" type="image/jpeg" />
-            <img src="img/img2.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
-          </picture>
-        </div>
-
-
-        <!-- Slider buttons -->
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-
-        <!-- Dots -->
-        <div class="dots"></div>
-      </div>
-    </section>
-
-    <section class="section-meals-3" id="meals">
-      <div class="ribbon-container">
-        <div class="ribbon">
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-          <div class="moving-skill">WORLD CHAMPION</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-hero-5th">
-      <div class="container center-text">
-        <h2 class="heading-secondary-5th">
-          MISSION AND GOALS
-        </h2>
-      </div>
-      <div class="hero-5th">
-        <div class="hero-text-box-5th">
-          <div class="step-text-box">
-            <p class="step-number-5">EMPOWERING <span>FUTURE GENERATIONS</span></p>
-            <p class="hero-description-5th">
-              Our role is to enable our children by
-              empowering them <br /> physically and mentally.
-              <!-- <ul>
-                  <li>Physical and mental growth for kids</li>
-                  <li>Discpline and strong mindset for kids and adults</li>
-                  <li>Physical and mental growth for kids</li>
-                </ul> -->
-            </p>
-          </div>
-        </div>
-        <div class="cta">
-          <div class="cta-text-box">
-            <h2 class="heading-secondary">JOIN US NOW</h2>
-
-            <form class="cta-form" name="sign-up">
-              <div class="form-group">
-                <input id="full-name" type="text" placeholder="Name" name="full-name" required />
-              </div>
-
-              <div class="form-group">
-                <input id="email" type="email" placeholder="E-mail" name="email" required />
-              </div>
-
-              <div class="form-group">
-                <input id="phone-number" type="tel" placeholder="Mobile number" name="phone-number" required />
-              </div>
-
-              <div class="form-group">
-                <input id="age" type="number" placeholder="Age" name="age" required />
-              </div>
-
-              <div class="form-group">
-                <select id="location" name="location" required>
-                  <option value="" disabled selected>Select Location</option>
-                  <option value="arjan">Arjan</option>
-                  <option value="downtown">Downtown</option>
-                  <option value="jbr">JBR</option>
-                </select>
-              </div>
-
-
-              <button class="btn btn--form" type="submit">Book Now</button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
@@ -334,12 +199,254 @@
           </picture>
         </div>
 
-        <!-- Slider buttons -->
         <button class="slider__btn-6th slider__btn--left-6th">&larr;</button>
         <button class="slider__btn-6th slider__btn--right-6th">&rarr;</button>
 
-        <!-- Dots -->
         <div class="dots-6th"></div>
+      </div>
+    </section>
+
+    <section class="section-hero-4th">
+      <div class="hero-4th slider">
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/imgimg.jpeg" type="image/jpeg" />
+            <img src="img/imgimg.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img3.jpeg" type="image/jpeg" />
+            <img src="img/img3.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img2.jpeg" type="image/jpeg" />
+            <img src="img/img2.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+          <picture>
+            <source srcset="img/imgimg.jpeg" type="image/jpeg" />
+            <img src="img/imgimg.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img3.jpeg" type="image/jpeg" />
+            <img src="img/img3.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img2.jpeg" type="image/jpeg" />
+            <img src="img/img2.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+          <picture>
+            <source srcset="img/imgimg.jpeg" type="image/jpeg" />
+            <img src="img/imgimg.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img3.jpeg" type="image/jpeg" />
+            <img src="img/img3.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+        <div class="hero-img-box slide">
+          <picture>
+            <source srcset="img/img2.jpeg" type="image/jpeg" />
+            <img src="img/img2.jpeg" class="hero-img-2nd" alt="Kids Martial Arts" />
+          </picture>
+        </div>
+
+
+        <!-- Slider buttons -->
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+
+        <!-- Dots -->
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section class="section-how" id="how">
+      <div class="container grid grid--2-cols grid--center-v">
+        <!-- STEP 01 -->
+        <div class="step-text-box">
+          <p class="step-number">TURN WEAKNESS INTO <span>STRENGTHS</span></p>
+        </div>
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary">BOOK A TRIAL CLASS</h2>
+
+            <form class="cta-form" name="sign-up">
+              <div class="form-group">
+                <input id="full-name" type="text" placeholder="Name" name="full-name" required />
+              </div>
+
+              <div class="form-group">
+                <input id="email" type="email" placeholder="E-mail" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <input id="phone-number" type="tel" placeholder="Mobile number" name="phone-number" required />
+              </div>
+
+              <div class="form-group">
+                <input id="age" type="number" placeholder="Age" name="age" required />
+              </div>
+
+              <div class="form-group">
+                <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+
+
+              <button class="btn btn--form" type="submit">Book Now</button>
+            </form>
+          </div>
+        </div>
+    </section>
+
+    <section class="section-meals-3" id="meals">
+      <div class="ribbon-container">
+        <div class="ribbon">
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+          <div class="moving-skill">WORLD CHAMPION</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section-hero-5th">
+      <video autoplay muted loop id="bg-video">
+        <source src="../img/team-video.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="container center-text">
+        <h2 class="heading-secondary-5th">
+          MISSION AND GOALS
+        </h2>
+      </div>
+      <div class="hero-5th">
+        <div class="hero-text-box-5th">
+          <div class="step-text-box">
+            <p class="step-number-5">EMPOWERING <span>FUTURE GENERATIONS</span></p>
+            <p class="hero-description-5th">
+              Our role is to enable our children by
+              empowering them <br /> physically and mentally.
+            <ul>
+              <li>Physical and mental growth for kids</li>
+              <li>Discpline and strong mindset for kids and adults</li>
+              <li>Physical and mental growth for kids</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary">JOIN US NOW</h2>
+
+            <form class="cta-form" name="sign-up">
+              <div class="form-group">
+                <input id="full-name" type="text" placeholder="Name" name="full-name" required />
+              </div>
+
+              <div class="form-group">
+                <input id="email" type="email" placeholder="E-mail" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <input id="phone-number" type="tel" placeholder="Mobile number" name="phone-number" required />
+              </div>
+
+              <div class="form-group">
+                <input id="age" type="number" placeholder="Age" name="age" required />
+              </div>
+
+              <div class="form-group">
+                <select id="location" name="location" required>
+                  <option value="" disabled selected>Select Location</option>
+                  <option value="arjan">Arjan</option>
+                  <option value="downtown">Downtown</option>
+                  <option value="jbr">JBR</option>
+                </select>
+              </div>
+
+
+              <button class="btn btn--form" type="submit">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="section-meals" id="meals">
+      <div class="container-packages">
+        <h2 class="heading-secondary">
+          CHECK OUT OUR PACKAGES BELOW
+        </h2>
+      </div>
+
+      <div class="container-packages grid-packages grid--3-cols margin-bottom-md">
+        <div class="meal">
+          <div class="meal-img"></div>
+          <div class="meal-content">
+            <div class="meal-header">
+              <p class="meal-title">Monthly Package</p>
+              <span class="age-badge">1 Month</span>
+            </div>
+            <div class="meal-tags">
+              <span class="tag tag--vegetarian">1 Month</span>
+            </div>
+
+
+            <button class="btn btn--form" type="submit">GET STARTED</button>
+          </div>
+        </div>
+
+        <div class="meal">
+          <div class="meal-img-2"></div>
+          <div class="meal-content">
+            <div class="meal-header">
+              <p class="meal-title">3-Month Package</p>
+              <span class="age-badge">3 Months</span>
+            </div>
+            <div class="meal-tags">
+              <span class="tag tag--vegetarian">3 Months</span>
+            </div>
+
+
+            <button class="btn btn--form" type="submit">GET STARTED</button>
+          </div>
+        </div>
+
+        <div class="meal">
+          <div class="meal-img-3"></div>
+          <div class="meal-content">
+            <div class="meal-header">
+              <p class="meal-title">Annual Package</p>
+              <span class="age-badge">1 Year</span>
+            </div>
+            <div class="meal-tags">
+              <span class="tag tag--vegetarian">1 Year</span>
+            </div>
+
+
+            <button class="btn btn--form" type="submit">GET STARTED</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -368,67 +475,6 @@
       </div>
     </section>
 
-
-    <section class="section-meals" id="meals">
-      <div class="container-packages">
-        <h2 class="heading-secondary">
-          CHECK OUT OUR PACKAGES BELOW
-        </h2>
-      </div>
-
-      <div class="container-packages grid-packages grid--3-cols margin-bottom-md">
-        <div class="meal">
-          <div class="meal-img"></div>
-          <div class="meal-content">
-            <div class="meal-header">
-              <p class="meal-title">BABY BJJ/JUDO</p>
-              <span class="age-badge">2-3 YEARS</span>
-            </div>
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">12 Months</span>
-            </div>
-
-
-            <button class="btn btn--form" type="submit">GET STARTED</button>
-          </div>
-        </div>
-
-        <div class="meal">
-          <div class="meal-img-2"></div>
-          <div class="meal-content">
-            <div class="meal-header">
-              <p class="meal-title">BABY BJJ/JUDO</p>
-              <span class="age-badge">4+ YEARS</span>
-            </div>
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">12 Months</span>
-            </div>
-
-
-            <button class="btn btn--form" type="submit">GET STARTED</button>
-          </div>
-        </div>
-
-        <div class="meal">
-          <div class="meal-img-3"></div>
-          <div class="meal-content">
-            <div class="meal-header">
-              <p class="meal-title">BABY BJJ/JUDO</p>
-              <span class="age-badge">BJJ | MMA | BOXING</span>
-            </div>
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">Special offer for TOPGYM members at the PALM location and for everyone
-                at the Downtown location</span>
-            </div>
-
-
-            <button class="btn btn--form" type="submit">GET STARTED</button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
     <section class="section-testimonials" id="testimonials">
       <div class="testimonials-container">
         <h2 class="heading-secondary">Client reviews</h2>
@@ -443,8 +489,10 @@
                 ⭐⭐⭐⭐⭐
               </div>
               <blockquote class="testimonial-text">
-                Both our boys attend jiu-jitsu at this gym. The coaches are professional and have a great way with the
-                kids. Our boys enjoy going and have progressed quickly. The atmosphere is welcoming, and the training is
+                Both our boys attend jiu-jitsu at this gym. The coaches are professional and have a great way with
+                the
+                kids. Our boys enjoy going and have progressed quickly. The atmosphere is welcoming, and the
+                training is
                 top-notch."
               </blockquote>
             </div>
@@ -474,7 +522,8 @@
                 ⭐⭐⭐⭐⭐
               </div>
               <blockquote class="testimonial-text">
-                I had a great session! Learned so much in one hour but mostly the service was amazing. If you are a
+                I had a great session! Learned so much in one hour but mostly the service was amazing. If you are
+                a
                 beginner and want to learn more about jiu-jitsu, I definitely recommend this gym.
               </blockquote>
             </div>
@@ -498,14 +547,15 @@
       </div>
     </section>
 
-    </div>
+    <!-- </div> -->
 
-    </section>
+    <!-- </section> -->
 
     <section class="section-mentor" id="mentor-slider">
       <div class="container">
         <h2 class="heading-secondary-coaches">
-          THE MAIN CHARACTERISTIC OF <span>MENTORS</span> IS THE COMBINATION OF <span>A SPORTS COACH</span>, <span>A
+          THE MAIN CHARACTERISTIC OF <span>MENTORS</span> IS THE COMBINATION OF <span>A SPORTS COACH</span>,
+          <span>A
             PARENT</span>, AND <span>A PEER</span> IN
           ONE PERSON.
         </h2>
@@ -580,11 +630,10 @@
               </div>
 
               <div class="form-group">
-                <select id="location" name="location" required>
-                  <option value="" disabled selected>Select Location</option>
-                  <option value="arjan">Arjan</option>
-                  <option value="downtown">Downtown</option>
-                  <option value="jbr">JBR</option>
+                <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
                 </select>
               </div>
 
@@ -605,7 +654,7 @@
     <div class="cta">
       <div class="cta-text-box">
         <h2 class="heading-secondary">JOIN US NOW</h2>
-        <form class="cta-form" name="sign-up">
+        <form class="cta-form" name="sign-up" id="signup-form">
           <div class="form-group">
             <input id="full-name" type="text" placeholder="Name" name="full-name" required />
           </div>
@@ -619,11 +668,10 @@
             <input id="age" type="number" placeholder="Age" name="age" required />
           </div>
           <div class="form-group">
-            <select id="location" name="location" required>
-              <option value="" disabled selected>Select Location</option>
-              <option value="arjan">Arjan</option>
-              <option value="downtown">Downtown</option>
-              <option value="jbr">JBR</option>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
           <button class="btn btn--form" type="submit">Book Now</button>
@@ -631,6 +679,7 @@
       </div>
     </div>
   </div>
+
 
   <footer class="footer">
     <div class="container grid grid--footer">
@@ -663,7 +712,7 @@
           </p>
           <p>
             <a class="footer-link" href="tel:+971562413781">+971 56 241 3781</a><br />
-            <a class="footer-link" href="mailto:info@teamzone10.com">info@teamzone10.com</a>
+            <a class="footer-link" href="mailto:info@teamzone10.net">info@teamzone10.net</a>
           </p>
         </address>
       </div>
@@ -674,10 +723,11 @@
     </div>
   </footer>
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/971505060701" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+  <a href="https://wa.me/971508272111" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
     <ion-icon name="logo-whatsapp"></ion-icon>
   </a>
 
+  <script defer src="js/script.js"></script>
 </body>
 
 </html>

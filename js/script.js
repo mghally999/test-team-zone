@@ -1,3 +1,35 @@
+document
+  .getElementById("signup-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get form values
+    const fullName =
+      document.getElementById("full-name").value.trim()
+      ;
+    const email = encodeURIComponent(
+      document.getElementById("email").value.trim()
+    );
+    const phoneNumber = encodeURIComponent(
+      document.getElementById("phone-number").value.trim()
+    );
+    const age = encodeURIComponent(document.getElementById("age").value.trim());
+    const gender = encodeURIComponent(
+      document.getElementById("gender").value.trim()
+    );
+
+    // Create WhatsApp message URL
+    const whatsappMessage = `Name: ${fullName}%0AEmail: ${email}%0AMobile Number: ${phoneNumber}%0AAge: ${age}%0AGender: ${gender}`;
+    const whatsappURL = `https://wa.me/971527240872?text=${whatsappMessage}`;
+
+    // Debugging
+    console.log(fullName, email, phoneNumber, age, gender);
+    console.log(whatsappURL);
+
+    // Redirect to WhatsApp
+    window.open(whatsappURL, "_blank");
+  });
+
 const content = [
   [
     "Movement skills",
@@ -20,11 +52,46 @@ const content = [
     "Leadership",
     "Self-defense",
   ],
+  [
+    "Hello",
+    "I am the 11-15 Teen",
+  ],
+  [
+    "Hello",
+    "White Belt Intro",
+  ],
+  [
+    "Hello",
+    "Beginner Classes",
+  ],
+  [
+    "Hello",
+    "Advanced Classes",
+  ],
+  [
+    "Hello",
+    "Competition Classes",
+  ],
+  [
+    "Hello",
+    "Private Classes",
+  ],
+  [
+    "Hello",
+    "Nogi Classes",
+  ],
 ];
 
-const btnWhyReact = document.getElementById("btn-why-react");
-const btnCoreFeature = document.getElementById("btn-core-features");
-const btnResources = document.getElementById("btn-resources");
+const kidsTwoThree = document.getElementById("kids-two-three");
+const kidsFourSix = document.getElementById("kids-four-six");
+const kidsSevenTen = document.getElementById("kids-seven-ten");
+const teensElevenFifteen = document.getElementById("teens-eleven-fifteen");
+const whiteBeltIntro = document.getElementById("white-belt-intro");
+const beginnerClasses = document.getElementById("beginner-classes");
+const advancedClasses = document.getElementById("advanced-classes");
+const competitionClasses = document.getElementById("competition-classes");
+const privateClasses = document.getElementById("private-classes");
+const nogiClasses = document.getElementById("nogi-classes");
 const tabContent = document.getElementById("tab-content");
 
 function displayContent(items) {
@@ -40,29 +107,53 @@ function displayContent(items) {
 
 function highlightButton(btn) {
   // Clear all existing styling / highlights
-  btnWhyReact.className = "";
-  btnCoreFeature.className = "";
-  btnResources.className = "";
+  document.querySelectorAll("menu button").forEach(button => {
+    button.className = "";
+  });
   btn.className = "active"; // set new style / highlight
 }
 
 function handleClick(event) {
   const btnId = event.target.id;
   highlightButton(event.target);
-  if (btnId === "btn-why-react") {
+  if (btnId === "kids-two-three") {
     displayContent(content[0]);
-  } else if (btnId === "btn-core-features") {
+  } else if (btnId === "kids-four-six") {
     displayContent(content[1]);
-  } else {
+  } else if (btnId === "kids-seven-ten") {
     displayContent(content[2]);
+  } else if (btnId === "teens-eleven-fifteen") {
+    displayContent(content[3]);
+  } else if (btnId === "white-belt-intro") {
+    displayContent(content[4]);
+  } else if (btnId === "beginner-classes") {
+    displayContent(content[5]);
+  } else if (btnId === "advanced-classes") {
+    displayContent(content[6]);
+  } else if (btnId === "competition-classes") {
+    displayContent(content[7]);
+  } else if (btnId === "private-classes") {
+    displayContent(content[8]);
+  } else if (btnId === "nogi-classes") {
+    displayContent(content[9]);
+  } else {
+    displayContent(content[0]);
   }
 }
 
 displayContent(content[0]); // initially show this content
 
-btnWhyReact.addEventListener("click", handleClick);
-btnCoreFeature.addEventListener("click", handleClick);
-btnResources.addEventListener("click", handleClick);
+// Add event listeners for all buttons
+kidsTwoThree.addEventListener("click", handleClick);
+kidsFourSix.addEventListener("click", handleClick);
+kidsSevenTen.addEventListener("click", handleClick);
+teensElevenFifteen.addEventListener("click", handleClick);
+whiteBeltIntro.addEventListener("click", handleClick);
+beginnerClasses.addEventListener("click", handleClick);
+advancedClasses.addEventListener("click", handleClick);
+competitionClasses.addEventListener("click", handleClick);
+privateClasses.addEventListener("click", handleClick);
+nogiClasses.addEventListener("click", handleClick);
 
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
