@@ -1,34 +1,31 @@
-document
-  .getElementById("signup-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById("signup-form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    // Get form values
-    const fullName =
-      document.getElementById("full-name").value.trim()
-      ;
-    const email = encodeURIComponent(
-      document.getElementById("email").value.trim()
-    );
-    const phoneNumber = encodeURIComponent(
-      document.getElementById("phone-number").value.trim()
-    );
-    const age = encodeURIComponent(document.getElementById("age").value.trim());
-    const gender = encodeURIComponent(
-      document.getElementById("gender").value.trim()
-    );
+  // Get form values
+  const fullName = document.getElementById("full-name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phoneNumber = document.getElementById("phone-number").value.trim();
+  const age = document.getElementById("age").value.trim();
+  const gender = document.getElementById("gender").value.trim();
 
-    // Create WhatsApp message URL
-    const whatsappMessage = `Name: ${fullName}%0AEmail: ${email}%0AMobile Number: ${phoneNumber}%0AAge: ${age}%0AGender: ${gender}`;
-    const whatsappURL = `https://wa.me/971527240872?text=${whatsappMessage}`;
+  // Debugging - Log the values
+  console.log("Full Name:", fullName);
+  console.log("Email:", email);
+  console.log("Phone Number:", phoneNumber);
+  console.log("Age:", age);
+  console.log("Gender:", gender);
 
-    // Debugging
-    console.log(fullName, email, phoneNumber, age, gender);
-    console.log(whatsappURL);
+  // Create WhatsApp message URL
+  const whatsappMessage = `Name: ${encodeURIComponent(fullName)}%0AEmail: ${encodeURIComponent(email)}%0AMobile Number: ${encodeURIComponent(phoneNumber)}%0AAge: ${encodeURIComponent(age)}%0AGender: ${encodeURIComponent(gender)}`;
+  const whatsappURL = `https://wa.me/971527240872?text=${whatsappMessage}`;
 
-    // Redirect to WhatsApp
-    window.open(whatsappURL, "_blank");
-  });
+  // Debugging - Log the final URL
+  console.log("WhatsApp URL:", whatsappURL);
+
+  // Redirect to WhatsApp
+  window.open(whatsappURL, "_blank");
+});
+
 
 const content = [
   [
