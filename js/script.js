@@ -17,7 +17,7 @@ document.getElementById("signup-form").addEventListener("submit", function (even
 
   // Create WhatsApp message URL
   const whatsappMessage = `Name: ${encodeURIComponent(fullName)}%0AEmail: ${encodeURIComponent(email)}%0AMobile Number: ${encodeURIComponent(phoneNumber)}%0AAge: ${encodeURIComponent(age)}%0AGender: ${encodeURIComponent(gender)}`;
-  const whatsappURL = `https://wa.me/971527240872?text=${whatsappMessage}`;
+  const whatsappURL = `https://wa.me/971562413781?text=${whatsappMessage}`;
 
   // Debugging - Log the final URL
   console.log("WhatsApp URL:", whatsappURL);
